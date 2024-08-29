@@ -1,0 +1,42 @@
+{
+  "name": "llm-rag-chatbot",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js --watch"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.js$": "babel-jest"
+    },
+    "testEnvironment": "node",
+    "moduleNameMapper": {
+      "^@/(.*)$": "<rootDir>/src/$1"
+    }
+  },
+  "dependencies": {
+    "cliui": "7.0.4",
+    "next": "14.2.7",
+    "react": "^18",
+    "react-dom": "^18",
+    "string-width": "4.2.3",
+    "string-width-cjs": "4.2.3",
+    "wrap-ansi": "5.1.0",
+    "yargs": "15.4.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.25.2",
+    "@babel/preset-env": "^7.25.4",
+    "babel-jest": "^29.7.0",
+    "dotenv": "^16.4.5",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.7",
+    "jest": "^29.7.0",
+    "nock": "^13.5.5",
+    "node-mocks-http": "^1.15.1"
+  }
+}
