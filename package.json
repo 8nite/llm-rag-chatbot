@@ -20,6 +20,7 @@
   },
   "dependencies": {
     "cliui": "7.0.4",
+    "mongoose": "^8.6.0",
     "next": "14.2.7",
     "react": "^18",
     "react-dom": "^18",
