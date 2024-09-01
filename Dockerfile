@@ -12,5 +12,4 @@ RUN yarn cache clean && yarn install --network-timeout 1000000000
 ## Build the app
 RUN yarn build
 
-# Start the app with 'serve'
 CMD ["yarn", "start"]
