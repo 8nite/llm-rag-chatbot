@@ -115,6 +115,9 @@ export async function handlePrompt(userId, prompt, rag, reqId, apiKey) {
       content: aiResponse,
     });
 
+    console.log(`[${reqId}] [INFO] prompt: ${prompt}`);
+    console.log(`[${reqId}] [INFO] response: ${aiResponse}`);
+
     if (existingMessage) {
       console.log(
         `[${reqId}] [INFO] Accumulating content to existing message with ID: ${existingMessage._id}`
