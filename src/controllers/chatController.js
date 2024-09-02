@@ -57,6 +57,7 @@ export async function handlePrompt(userId, prompt, rag, reqId, apiKey) {
     );
     const data = {
       model: process.env.CLOUDFLARE_MODEL_NAME,
+      max_tokens: 100,
       messages: messages,
     };
 
