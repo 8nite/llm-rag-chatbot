@@ -5,7 +5,7 @@ export async function sendEscalationEmail({ to, subject, message }) {
   const transporter = nodemailer.createTransport({
     host: process.env.EMAIL_HOST,
     port: process.env.EMAIL_PORT,
-    secure: process.env.EMAIL_SECURE === "true", // true for 465, false for other ports
+    secure: process.env.EMAIL_SECURE === false, // true for 465, false for other ports
     auth: {
       user: process.env.EMAIL_USER, // Your email username
       pass: process.env.EMAIL_PASS, // Your email password
