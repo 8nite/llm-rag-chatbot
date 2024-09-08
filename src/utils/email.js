@@ -19,7 +19,7 @@ export async function sendEscalationEmail({ to, subject, message }) {
     from: `"Nexvision Support" <${process.env.EMAIL_FROM}>`, // Sender address
     to, // List of receivers
     subject, // Subject line
-    text: message, // Plain text body
+    text: message,
   });
 
   console.log(`Email sent to ${to} with subject: ${subject}`);
