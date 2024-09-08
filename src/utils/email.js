@@ -15,7 +15,6 @@ export async function sendEscalationEmail({ to, subject, message }) {
     },
   });
 
-  // Send mail with defined transport object
   await transporter.sendMail({
     from: `"Nexvision Support" <${process.env.EMAIL_FROM}>`, // Sender address
     to, // List of receivers
