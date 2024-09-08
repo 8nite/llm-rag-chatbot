@@ -8,7 +8,7 @@ export async function sendEscalationEmail({ to, subject, message }) {
     secure: process.env.EMAIL_SECURE === "true", // true for 465, false for other ports
     auth: {
       user: process.env.EMAIL_USER, // Your email username
-      pass: process.env.EMAIL_PASS, // Your email password
+      pass: process.env.EMAIL_PASS,
     },
     tls: {
       rejectUnauthorized: false,
