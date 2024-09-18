@@ -6,7 +6,7 @@ export default async function handler(req, res) {
     const { from, subject, message } = req.body;
 
     // Validate that the required fields are present
-    if (!to || !subject || !message) {
+    if (!from || !subject || !message) {
       return res
         .status(400)
         .json({ error: "Missing required fields: to, subject, message" });
@@ -22,7 +22,7 @@ export default async function handler(req, res) {
       });
 
       // Respond with a success message
-      res.status(200).json({ message: `Email sent to ${to}` });
+      res.status(200).json({ message: `Email sent from ${from}` });
     } catch (error) {
       // Handle any errors and return a 500 status
       console.error(`Failed to send email: ${error.message}`);
