@@ -1,6 +1,11 @@
 import nodemailer from "nodemailer";
 
-export async function sendEscalationEmail({ to, subject, message }) {
+export async function sendEscalationEmail({
+  from = null,
+  to,
+  subject,
+  message,
+}) {
   // Create a transporter object using the default SMTP transport
   const transporter = nodemailer.createTransport({
     host: process.env.EMAIL_HOST,
@@ -16,7 +21,7 @@ export async function sendEscalationEmail({ to, subject, message }) {
   });
 
   await transporter.sendMail({
-    from: `"Nexvision Support" <${process.env.EMAIL_FROM}>`, // Sender address
+    from: from || `"Nexvision Support" <${process.env.EMAIL_FROM}>`, // Sender address
     to, // List of receivers
     subject, // Subject line
     text: message,
