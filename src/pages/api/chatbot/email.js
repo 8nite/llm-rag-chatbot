@@ -1,5 +1,5 @@
 // Import the sendEscalationEmail function from utils/email.js
-import { sendEscalationEmail } from "../../utils/email";
+import { sendEscalationEmail } from "../../../utils/email";
 
 export default async function handler(req, res) {
   if (req.method === "POST") {

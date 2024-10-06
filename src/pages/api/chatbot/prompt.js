@@ -1,4 +1,4 @@
-import { handlePrompt } from "../../controllers/chatController";
+import { handlePrompt } from "../../../controllers/chatController";
 
 export default async function handler(req, res) {
   if (req.method === "POST") {
